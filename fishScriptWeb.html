@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="fishCSS.css">
+    <link href="fishCSS.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>fishScript</title>
 </head>
 <body>
 <h1>fishScript</h1>
-<h3>a mildly irritating language</h3>
+<h3>Your second favorite scaly creature themed programing language.</h3>
 
 
 <script>
@@ -90,12 +90,13 @@
         }
     }
 </script>
-<form>
-    <label for="code">Put your code here:</label><br>
-    <input type="text" id="code" name="code"><br>
-    <button type="button" onclick="fishRunner()">Run!</button>
-</form>
-
+<div class="inputForm">
+    <form>
+        <label for="code">Put your code here:</label><br>
+        <textarea id="code" name="code"></textarea>
+    </form>
+</div>
+<button class="runBtn" onclick="fishRunner()" type="button">Run!</button>
 
 </body>
 </html>

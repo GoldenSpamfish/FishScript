@@ -1,5 +1,21 @@
-code {
-    height: max-content;
-    width: max-content;
+label {
+    padding-bottom: 30px;
+}
 
+textarea {
+    height: 50vh;
+    width: 90vw;
+    padding: 10px;
+}
+
+.runBtn {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    font-size: 150%;
+    border-radius: 5px;
+}
+
+.inputForm {
+    white-space: nowrap;
 }
