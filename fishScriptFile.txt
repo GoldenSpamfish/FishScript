@@ -1,0 +1,34 @@
+
+>? What a cool language am I right?
+>? very practical isn't it?
+>? well maybe not.
+>? But this is the first every code written in fishScript!
+>? Behold!
+
+>$ print @
+>$ print @ obligatory "hello world!"
+>$ print @
+
+
+>? defines 3 variables (can make any number of these) (also they can use math!)
+>& number num = 1+1*2
+>& number othernum = 7.0
+>& number thirdnum = 4
+
+>? prints out these 3 variables
+>$ print @ displays our variables:
+    >$ print & num
+    >$ print & othernum
+    >$ print & thirdnum
+    >$ print @
+    >? btw tabs dont do anything I just like how they look
+
+
+>? demonstrates the loop function
+>$ print @ prints the value of variable num 3 times:
+    >* repeat 3 print & num
+    >$ print @
+    >$ print @ loops also work with text! See?
+    >$ print @
+    >* repeat 4 print @ knowledge is power
+
