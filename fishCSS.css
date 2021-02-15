@@ -1,3 +1,7 @@
+body {
+    font-family: Consolas, serif;
+}
+
 label {
     padding-bottom: 30px;
 }
@@ -14,8 +18,13 @@ textarea {
     color: black;
     font-size: 150%;
     border-radius: 5px;
+    font-family: Consolas, serif;
 }
 
 .inputForm {
     white-space: nowrap;
+}
+
+.codeOut {
+    padding-left: 10px;
 }

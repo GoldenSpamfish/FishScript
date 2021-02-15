@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <link href="fishCSS.css" rel="stylesheet">
-    <meta charset="UTF-8">
+    <link type='text/css' href='fishCSS.css' rel='stylesheet'>
+    <meta charset='UTF-8'>
     <title>fishScript</title>
 </head>
 <body>
@@ -13,8 +13,9 @@
 <script>
 
     function fishRunner() {
-        //let code = '>$ print @ Hello World'
-        let code = document.getElementById("code").value;
+        let out = '';
+
+        let code = document.getElementById('code').value;
         let lines = code.split('>');
         let variables = {};
         for (let i = 0; i < lines.length; i++) {
@@ -26,12 +27,11 @@
 
         // The print function
         function fishPrint(dataIn) {
-            if (dataIn[0] === "@") {
+            if (dataIn[0] === '@') {
                 dataIn.shift()
-                return " ".concat(dataIn.join(" "))
-            } else if (dataIn[0] === "&") {
+                return ' '.concat(dataIn.join(' '))
+            } else if (dataIn[0] === '&') {
                 // meat of the print function (change to get element)
-                //console.log(dataIn)
 
                 return variables[dataIn[1]]
             }
@@ -50,53 +50,58 @@
         // ACTUAL RUNNER
 
         for (let line in lines) {
-            let data = lines[line].split(" ")
+            let data = lines[line].split(' ')
             //console.log(lines[line])
             //variable definition
-            if (data[0] === "&") {
+            if (data[0] === '&') {
                 data.shift();
                 variableDef(data);
             }
 
             //for running functions
-            else if (data[0] === "$") {
+            else if (data[0] === '$') {
                 data.shift()
 
                 //print function
-                if (data.shift() === "print") {
-                    console.log(fishPrint(data))
+                if (data.shift() === 'print') {
+                    out = out.concat(String(fishPrint(data)) + '<br>')
                 }
             }
 
             //loops
-            else if (data[0] === "*") {
+            else if (data[0] === '*') {
                 data.shift()
 
                 //for repeat loops(effectively for loops)
-                if (data.shift() === "repeat") {
+                if (data.shift() === 'repeat') {
                     let repeats = eval(data.shift())
 
 
                     //repeated printing
-                    if (data.shift() === "print") {
+                    if (data.shift() === 'print') {
                         let toPrint = fishPrint(data)
 
                         for (let i = 0; i < repeats; i++) {
-                            console.log(toPrint)
+                            out = out.concat(String(toPrint) + '<br>')
                         }
                     }
                 }
             }
         }
+        document.getElementById('output').innerHTML = out;
     }
 </script>
-<div class="inputForm">
+<div class='inputForm'>
     <form>
-        <label for="code">Put your code here:</label><br>
-        <textarea id="code" name="code"></textarea>
+        <label for='code'>Put your code here:</label><br>
+        <textarea id='code' name='code'></textarea>
     </form>
 </div>
-<button class="runBtn" onclick="fishRunner()" type="button">Run!</button>
+<button class='runBtn' onclick='fishRunner()' type='button'>Run!</button>
+
+<div class='codeOut'>
+    <p id='output'></p>
+</div>
 
 </body>
 </html>
