@@ -29,20 +29,23 @@
         function fishPrint(dataIn) {
             if (dataIn[0] === '@') {
                 dataIn.shift()
-                return ' '.concat(dataIn.join(' '))
+                return ''.concat(dataIn.join(' '))
             } else if (dataIn[0] === '&') {
-                // meat of the print function (change to get element)
 
                 return variables[dataIn[1]]
             }
         }
 
         function variableDef(dataIn) {
-            if (dataIn.shift() === 'number') {
+            if (dataIn[0] === 'number') {
+                dataIn.shift()
                 variables[dataIn[0]] = eval(dataIn[2])
+            } else if (dataIn[0] === 'word') {
+                dataIn.shift()
+                dataIn.shift()
+                dataIn.shift()
+                variables[dataIn[0]] = "".concat(dataIn.join(" "))
             }
-
-
         }
 
         //data = [];
@@ -90,6 +93,7 @@
         }
         document.getElementById('output').innerHTML = out;
     }
+
 </script>
 <div class='inputForm'>
     <form>

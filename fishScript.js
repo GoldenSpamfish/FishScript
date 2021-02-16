@@ -21,6 +21,9 @@ let code = '>? What a cool language am I right?\n' +
     '    >$ print & thirdnum\n' +
     '    >$ print @\n' +
     '    >? btw tabs dont do anything I just like how they look\n' +
+    '>? you can also use word variables (strings)' +
+    '>& word hello = hello world' +
+    '>$ print & hello' +
     '\n' +
     '\n' +
     '>? demonstrates the loop function\n' +
@@ -44,20 +47,23 @@ for (let i = 0; i < lines.length; i++) {
 function fishPrint(dataIn) {
     if (dataIn[0] === "@") {
         dataIn.shift()
-        return " ".concat(dataIn.join(" "))
+        return "".concat(dataIn.join(" "))
     } else if (dataIn[0] === "&") {
-        // meat of the print function (change to get element)
-        //console.log(dataIn)
 
         return variables[dataIn[1]]
     }
 }
 
 function variableDef(dataIn) {
-    if (dataIn.shift() === 'number') {
+    if (dataIn[0] === 'number') {
+        dataIn.shift()
         variables[dataIn[0]] = eval(dataIn[2])
+    } else if (dataIn[0] === 'word') {
+        dataIn.shift()
+        dataIn.shift()
+        dataIn.shift()
+        variables[dataIn[0]] = "".concat(dataIn.join(" "))
     }
-
 
 }
 

@@ -14,13 +14,19 @@
 >& number othernum = 7.0
 >& number thirdnum = 4
 
+>? you can also use word variables (strings)
+>& word hello = hello world
+>$ print @ Prints string variable:
+>$ print & hello
+>$ print @
+
 >? prints out these 3 variables
 >$ print @ displays our variables:
     >$ print & num
     >$ print & othernum
     >$ print & thirdnum
     >$ print @
-    >? btw tabs dont do anything I just like how they look
+    >? btw tabs don't do anything I just like how they look
 
 
 >? demonstrates the loop function
