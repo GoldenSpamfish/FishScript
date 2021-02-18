@@ -16,13 +16,11 @@ h1 {
 
 .runBtn {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
+    background-color: lightgrey;
+    color: darkgray;
     font-size: 150%;
-    border-radius: 5px;
-    font-family: Consolas, serif;
     width: 100%;
-
+    border: none;
     margin: auto;
     position: center;
 }
@@ -63,7 +61,8 @@ h1 {
 .codeOut {
     padding-left: 10px;
     background-color: rgb(241, 241, 241);
-    height: 745px;
+    height: 740px;
+    overflow-y: auto;
 }
 
 
@@ -73,8 +72,6 @@ textarea {
     font-feature-settings: inherit;
     font-optical-sizing: inherit;
     tab-size: inherit;
-
-    margin-left: 0px;
     position: relative;
 }
 
