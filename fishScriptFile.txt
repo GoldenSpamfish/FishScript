@@ -33,7 +33,8 @@
 >$ print @ prints the value of variable num 3 times:
     >* repeat 3 print & num
     >$ print @
-    >$ print @ loops also work with text! See?
+
+>$ print @ loops also work with text! See?
     >$ print @
     >* repeat 4 print @ knowledge is power
 
