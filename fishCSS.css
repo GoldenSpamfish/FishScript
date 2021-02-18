@@ -23,7 +23,28 @@ textarea {
 
 .inputForm {
     white-space: nowrap;
+    outline: none;
+    border: none;
 }
+
+textarea {
+    border: none transparent;
+    background-color: rgb(241, 241, 241);
+    overflow: auto;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+textarea {
+    caret-color: rgb(0, 0, 0);
+    font: inherit;
+    font-feature-settings: inherit;
+    font-optical-sizing: inherit;
+    tab-size: inherit;
+    padding-left: 8px;
+}
+
 
 .codeOut {
     padding-left: 10px;
