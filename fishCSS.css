@@ -1,15 +1,17 @@
 body {
     font-family: Consolas, serif;
+
 }
 
-label {
-    padding-bottom: 30px;
+.topPart {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 50%;
 }
 
-textarea {
-    height: 50vh;
-    width: 90vw;
-    padding: 10px;
+h1 {
+    text-align: center;
 }
 
 .runBtn {
@@ -19,6 +21,10 @@ textarea {
     font-size: 150%;
     border-radius: 5px;
     font-family: Consolas, serif;
+    width: 100%;
+
+    margin: auto;
+    position: center;
 }
 
 .inputForm {
@@ -27,14 +33,39 @@ textarea {
     border: none;
 }
 
-textarea {
-    border: none transparent;
-    background-color: rgb(241, 241, 241);
-    overflow: auto;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+.codeHeader {
+    background-color: #0F192A;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
+
+.fullCode {
+    float: left;
+    outline-color: #0F192A;
+    width: 49.5%;
+}
+
+.fullOut {
+    float: right;
+    outline-color: #0F192A;
+    width: 49.5%;
+    height: 800px
+}
+
+.outputHeader {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.codeOut {
+    padding-left: 10px;
+    background-color: rgb(241, 241, 241);
+    height: 745px;
+}
+
 
 textarea {
     caret-color: rgb(0, 0, 0);
@@ -42,10 +73,8 @@ textarea {
     font-feature-settings: inherit;
     font-optical-sizing: inherit;
     tab-size: inherit;
-    padding-left: 8px;
+
+    margin-left: 0px;
+    position: relative;
 }
 
-
-.codeOut {
-    padding-left: 10px;
-}

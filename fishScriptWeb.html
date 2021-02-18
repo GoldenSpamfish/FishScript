@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <link type='text/css' href='fishCSS.css' rel='stylesheet'>
-    <link type='text/css' href='codemirror/plugin/codemirror-5.59.2/lib/codemirror.css' rel='stylesheet'>
+    <link href='fishCSS.css' rel='stylesheet' type='text/css'>
+    <link href='codemirror/plugin/codemirror-5.59.2/lib/codemirror.css' rel='stylesheet' type='text/css'>
     <meta charset='UTF-8'>
     <title>fishScript</title>
 </head>
 <body>
-<h1>fishScript</h1>
-<h3>Your second favorite scaly creature themed programing language.</h3>
 
+<script src="codemirror/plugin/codemirror-5.59.2/lib/codemirror.js" type="text/javascript"></script>
+<script src="codemirror/js/jquery.min.js.js" type="text/javascript"></script>
+<script src="codemirror/js/default.js" type="text/javascript"></script>
+
+<div class="topPart">
+    <h1>fishScript</h1>
+    <p>Welcome to your second favorite scaly creature themed programing language.</p>
+</div>
+
+<div class="fullCode">
+    <p class="codeHeader">fishScript Interpreter</p>
+
+
+    <div class='inputForm'>
+        <form>
+            <textarea class='codemirror-textarea' id='code' name='code' spellcheck="false"></textarea>
+        </form>
+    </div>
+
+    <button class='runBtn' onclick='fishRunner()' type='button'>Run!</button>
+
+</div>
 
 <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: "text/x-csrc"
+    });
 
     function fishRunner() {
         let out = '';
+        let code = editor.getValue()
 
-        let code = document.getElementById('code').value;
+        //console.log(code + "works")
         let lines = code.split('>');
         let variables = {};
         for (let i = 0; i < lines.length; i++) {
@@ -96,22 +122,14 @@
     }
 
 </script>
-<div class='inputForm'>
-    <form>
-        <label for='code'>Put your code here:
-            <textarea class='codemirror-textarea' id="code" name='code' spellcheck="false"></textarea>
-        </label>
-    </form>
-</div>
+<div class="fullOut">
 
-<script type="text/javascript" src="codemirror/js/jquery.min.js.js"></script>
-<script type="text/javascript" src="codemirror/plugin/codemirror-5.59.2/lib/codemirror.js"></script>
-<script type="text/javascript" src="codemirror/js/default.js"></script>
+    <p class="outputHeader">Output</p>
 
-<button class='runBtn' onclick='fishRunner()' type='button'>Run!</button>
+    <div class='codeOut'>
+        <p id='output'></p>
+    </div>
 
-<div class='codeOut'>
-    <p id='output'></p>
 </div>
 
 </body>
