@@ -6,7 +6,6 @@
   height: 650px;
   color: black;
   direction: ltr;
-  padding-top: 0px;
   padding-bottom: 20px;
 }
 
@@ -404,7 +403,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   border-width: 0;
   background: transparent;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 14px;
   margin: 0;
   white-space: pre;
   word-wrap: normal;

@@ -4,7 +4,6 @@
 >? But this is the first every code written in fishScript!
 >? Behold!
 
->$ print @
 >$ print @ obligatory "hello world!"
 >$ print @
 
