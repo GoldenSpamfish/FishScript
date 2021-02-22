@@ -1,3 +1,10 @@
+>? -------------------------------------------------
+>?    \     |-- '    |     /--\          '       |
+>? \ / \    |-- | (- |/-\  '--. /-- |/-\ | |--\ -|-
+>? / \ /    |   | _) |   | \__/ \__ |    | |__/  |
+>?    /                                    |
+>? -------------------------------------------------
+
 >? What a cool language am I right?
 >? very practical isn't it?
 >? well maybe not.
@@ -36,4 +43,3 @@
 >$ print @ loops also work with text! See?
     >$ print @
     >* repeat 4 print @ knowledge is power
-
