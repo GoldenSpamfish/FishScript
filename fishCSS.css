@@ -3,6 +3,11 @@ body {
 
 }
 
+.logo {
+    position: fixed;
+
+}
+
 .topPart {
     text-align: center;
     position: relative;
@@ -32,7 +37,7 @@ h1 {
 }
 
 .codeHeader {
-    background-color: #0F192A;
+    background-color: #001556;
     color: white;
     text-align: center;
     padding: 5px;
