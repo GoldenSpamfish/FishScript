@@ -11,8 +11,8 @@
 <script src="codemirror/plugin/codemirror-5.59.2/lib/codemirror.js" type="text/javascript"></script>
 <script src="codemirror/js/jquery.min.js.js" type="text/javascript"></script>
 <div class="logo">
-    <img src="FS%20Logo%206.6.png"
-         height="112">
+    <img alt="FS%20Logo%206.6.png"
+         height="110" src="FS%20Logo%206.6.png">
 </div>
 
 <div class="topPart">
@@ -58,13 +58,29 @@
 
         // The print function
         function fishPrint(dataIn) {
-            if (dataIn[0] === '@') {
-                dataIn.shift()
-                return ''.concat(dataIn.join(' '))
-            } else if (dataIn[0] === '&') {
+            let printOut = '';
+            //console.log(dataIn);
+            if ((dataIn[0] === '-')) {
+                if (dataIn[1] === '@') {
+                    dataIn.shift();
+                    dataIn.shift();
+                    printOut = printOut + (dataIn.join(' '));
 
-                return variables[dataIn[1]]
+                } else if (dataIn[1] === '&') {
+                    printOut = printOut + variables[dataIn[2]];
+                }
+            } else {
+                if (dataIn[0] === '@') {
+                    dataIn.shift()
+                    printOut = printOut + (dataIn.join(' '));
+
+                } else if (dataIn[0] === '&') {
+                    printOut = printOut + (variables[dataIn[1]]);
+                }
+                printOut = printOut + ('<br>');
             }
+            console.log(printOut);
+            return printOut;
         }
 
         function variableDef(dataIn) {
@@ -99,7 +115,7 @@
 
                 //print function
                 if (data.shift() === 'print') {
-                    out = out.concat(String(fishPrint(data)) + '<br>')
+                    out = out.concat(String(fishPrint(data)))
                 }
             }
 
@@ -117,7 +133,7 @@
                         let toPrint = fishPrint(data)
 
                         for (let i = 0; i < repeats; i++) {
-                            out = out.concat(String(toPrint) + '<br>')
+                            out = out.concat(String(toPrint))
                         }
                     }
                 }

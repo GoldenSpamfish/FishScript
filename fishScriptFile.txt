@@ -14,11 +14,23 @@
 >$ print @ obligatory "hello world!"
 >$ print @
 
+>$ print - @ multiline prints are cool,
+>$ print @ they let you skip the next new line.
+
+>$ print @
 
 >? defines 3 variables (can make any number of these) (also they can use math!)
 >& number num = 1+1*2
->& number othernum = 7.0
->& number thirdnum = 4
+>& number othernum = 4
+>& number thirdnum = 7.0
+
+>$ print - @ The first number,
+>$ print - & num
+>$ print - @ , plus the second number,
+>$ print - & othernum
+>$ print - @ , equals the third number,
+>$ print - & thirdnum >$ print @ .
+>$ print @
 
 >? you can also use word variables (strings)
 >& word hello = hello world
