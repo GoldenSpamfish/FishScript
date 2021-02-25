@@ -44,7 +44,7 @@
     >$ print & othernum
     >$ print & thirdnum
     >$ print @
-    >? btw tabs don't do anything I just like how they look
+    >? btw tabs dont do anything I just like how they look
 
 
 >? demonstrates the loop function

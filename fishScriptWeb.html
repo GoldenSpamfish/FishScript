@@ -10,6 +10,7 @@
 
 <script src="codemirror/plugin/codemirror-5.59.2/lib/codemirror.js" type="text/javascript"></script>
 <script src="codemirror/js/jquery.min.js.js" type="text/javascript"></script>
+<script src="codemirror/plugin/codemirror-5.59.2/mode/fishScript/fish.js" type="text/javascript"></script>
 <div class="logo">
     <img alt="FS%20Logo%206.6.png"
          height="110" src="FS%20Logo%206.6.png">
@@ -27,7 +28,64 @@
     <div class='inputForm'>
         <form>
             <label for='code'></label>
-            <textarea class='codemirror-textarea' id='code' name='code' spellcheck="false"></textarea>
+            <textarea class='codemirror-textarea' id='code' name='code' spellcheck="false">>? -------------------------------------------------
+>?    \     |-- '    |     /--\          '       |
+>? \ / \    |-- | (- |/-\  '--. /-- |/-\ | |--\ -|-
+>? / \ /    |   | _) |   | \__/ \__ |    | |__/  |
+>?    /                                    |
+>? -------------------------------------------------
+
+>? What a cool language am I right?
+>? very practical isn't it?
+>? well maybe not.
+>? But this is the first every code written in fishScript!
+>? Behold!
+
+>$ print @ obligatory "hello world!"
+>$ print @
+
+>$ print - @ multiline prints are cool,
+>$ print @ they let you skip the next new line.
+
+>$ print @
+
+>? defines 3 variables (can make any number of these) (also they can use math!)
+>& number num = 1+1*2
+>& number othernum = 4
+>& number thirdnum = 7.0
+
+>$ print - @ The first number,
+>$ print - & num
+>$ print - @ , plus the second number,
+>$ print - & othernum
+>$ print - @ , equals the third number,
+>$ print - & thirdnum >$ print @ .
+>$ print @
+
+>? you can also use word variables (strings)
+>& word hello = hello world
+>$ print @ Prints string variable:
+>$ print & hello
+>$ print @
+
+>? prints out these 3 variables
+>$ print @ displays our variables:
+    >$ print & num
+    >$ print & othernum
+    >$ print & thirdnum
+    >$ print @
+    >? btw tabs dont do anything I just like how they look
+
+
+>? demonstrates the loop function
+>$ print @ prints the value of variable num 3 times:
+    >* repeat 3 print & num
+    >$ print @
+
+>$ print @ loops also work with text! See?
+    >$ print @
+    >* repeat 4 print @ knowledge is power
+</textarea>
         </form>
     </div>
 
@@ -39,7 +97,7 @@
     let editor = CodeMirror.fromTextArea(document.getElementById('code'), {
         lineNumbers: true,
         matchBrackets: true,
-        mode: "text/x-csrc"
+        mode: "fish"
     });
 
     function fishRunner() {
