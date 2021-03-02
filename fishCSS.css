@@ -1,18 +1,57 @@
 body {
     font-family: Consolas, serif;
-
+    display: block;
 }
 
-.logo {
-    position: fixed;
-
-}
 
 .topPart {
     text-align: center;
     position: relative;
     margin: auto;
-    width: 50%;
+    top: 5%;
+    /*padding-bottom: 5%;*/
+
+}
+
+.topText {
+    top: 25px;
+}
+
+.logo {
+    position: absolute;
+    top: -5%;
+}
+
+.learnBtn {
+    left: 200px;
+    top: 15%;
+    position: absolute;
+    margin: auto;
+    text-decoration: none;
+    /*color: darkgray;
+    background-color: lightgrey;*/
+    color: white;
+    background-color: #001556;
+    border-radius: 32px;
+    font-weight: bold;
+    font-size: 130%;
+    padding: 20px 30px
+}
+
+.writeBtn {
+    left: 200px;
+    top: 40px;
+    position: fixed;
+    margin: auto;
+    text-decoration: none;
+    /*color: darkgray;
+    background-color: lightgrey;*/
+    color: white;
+    background-color: orange;
+    border-radius: 32px;
+    font-weight: bold;
+    font-size: 130%;
+    padding: 20px 30px
 }
 
 h1 {
