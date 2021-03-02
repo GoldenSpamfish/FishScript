@@ -8,7 +8,7 @@
 >? What a cool language am I right?
 >? very practical isn't it?
 >? well maybe not.
->? But this is the first every code written in fishScript!
+>? But this is the first code written in fishScript!
 >? Behold!
 
 >$ print @ obligatory "hello world!"

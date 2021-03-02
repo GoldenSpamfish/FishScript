@@ -28,8 +28,6 @@ body {
     position: absolute;
     margin: auto;
     text-decoration: none;
-    /*color: darkgray;
-    background-color: lightgrey;*/
     color: white;
     background-color: #001556;
     border-radius: 32px;
@@ -40,12 +38,10 @@ body {
 
 .writeBtn {
     left: 200px;
-    top: 40px;
-    position: fixed;
+    top: 15%;
+    position: absolute;
     margin: auto;
     text-decoration: none;
-    /*color: darkgray;
-    background-color: lightgrey;*/
     color: white;
     background-color: orange;
     border-radius: 32px;
