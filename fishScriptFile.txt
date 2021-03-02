@@ -55,3 +55,6 @@
 >$ print @ loops also work with text! See?
     >$ print @
     >* repeat 4 print @ knowledge is power
+
+>* if test # & num <= & othernum # print @ true statement
+>* else test # print @ false statement
