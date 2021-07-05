@@ -1,32 +1,19 @@
 body {
     font-family: Consolas, serif;
     display: block;
+    background-image: url("FS Logo 6.6.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 69%;
+    background-position-y: 12em;
+    background-size: 70em;
 }
 
-
-.topPart {
-    text-align: center;
-    position: relative;
-    margin: auto;
-    top: 5%;
-    /*padding-bottom: 5%;*/
-
+.title{
+    font-weight: bold;
 }
 
-.topText {
-    top: 25px;
-}
-
-.logo {
-    position: absolute;
-    top: -5%;
-}
-
-.learnBtn {
-    left: 200px;
-    top: 15%;
-    position: absolute;
-    margin: auto;
+#learnBtn {
     text-decoration: none;
     color: white;
     background-color: #001556;
@@ -36,11 +23,18 @@ body {
     padding: 20px 30px
 }
 
-.writeBtn {
-    left: 200px;
-    top: 15%;
-    position: absolute;
-    margin: auto;
+#head{
+    border: 10px solid white;
+    border-top-color: #001556;
+    border-bottom-color: orange;
+
+    background-color: rgba(241, 241, 241,1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+#writeBtn {
+    white-space: nowrap;
     text-decoration: none;
     color: white;
     background-color: orange;
@@ -48,12 +42,12 @@ body {
     font-weight: bold;
     font-size: 130%;
     padding: 20px 30px
+
 }
 
-h1 {
-    text-align: center;
+.btn{
+    display: inline-block;
 }
-
 .runBtn {
     padding: 20px;
     background-color: lightgrey;
@@ -84,13 +78,6 @@ h1 {
     width: 49.5%;
 }
 
-.fullOut {
-    float: right;
-    outline-color: #0F192A;
-    width: 49.5%;
-    height: 800px
-}
-
 .outputHeader {
     background-color: orange;
     color: white;
@@ -98,9 +85,17 @@ h1 {
     padding: 5px;
 }
 
+.fullOut {
+    float: right;
+    outline-color: #0F192A;
+    width: 49.5%;
+
+}
+
+
 .codeOut {
     padding-left: 10px;
-    background-color: rgb(241, 241, 241);
+    background-color: rgba(241, 241, 241, 0.5);
     height: 740px;
     overflow-y: auto;
     font-size: 14px;

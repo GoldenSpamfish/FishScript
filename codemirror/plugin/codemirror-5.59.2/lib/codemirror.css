@@ -3,10 +3,11 @@
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
-  height: 650px;
+  height: 662px;
   color: black;
   direction: ltr;
   padding-bottom: 20px;
+  margin-top: -22px;
 }
 
 /* PADDING */
@@ -291,7 +292,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 .CodeMirror {
   position: relative;
   overflow: hidden;
-  background-color: rgb(241, 241, 241);;
+  background-color: rgba(241, 241, 241,0.5);;
 }
 
 .CodeMirror-scroll {
